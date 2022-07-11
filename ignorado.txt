@@ -1,0 +1,1 @@
+se debe colocar las extension o los archivos que no son necesarios en el repositorio tal como ejecutables, carpetas propias de vscode, archivos de configuracion etc
