@@ -4,10 +4,11 @@ int cuadrado(int num);
 void cuadradoV(int num2, int *p);
 void mostrarVariable(int *p_var);
 void invertir(int *a, int *b);
+void ordenar(int *menor, int *mayor);
 
 int main(){
     int cuad, cuad2, *puntero, numero1, numero2;
-    int variable, *p_var, a, b;
+    int variable, *p_var, a, b, x, y;
     printf("Ingrese un numero entero:");
     scanf("%d", &numero1);
     cuad = cuadrado(numero1);
@@ -28,6 +29,13 @@ int main(){
     printf("\nlos numeros ingresados son %d y %d", a, b);
     invertir(&a, &b);
     printf("\nlos numeros invertidos son %d y %d", a, b);
+    printf("Ingrese un numero entero:");
+    scanf("%d", &x);
+    printf("Ingrese un numero entero:");
+    scanf("%d", &y);
+    printf("\nlos numeros ingresados son %d y %d", x, y);
+    ordenar(&x, &y);
+    printf("\nlos numeros ingresados de menor a mayor, son %d y %d", x, y);
     return 0;
 }
 
@@ -48,4 +56,14 @@ void invertir(int *a, int *b){
     aux = *a;
     *a = *b;
     *b = aux;
+}
+
+void ordenar(int *menor, int *mayor){
+    int aux;
+    if (*menor > *mayor)
+    {
+        aux = *menor;
+        *menor = *mayor;
+        *mayor = aux;
+    }  
 }
